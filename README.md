@@ -1,4 +1,4 @@
-# Is it Friday
+# IsItFriday
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
