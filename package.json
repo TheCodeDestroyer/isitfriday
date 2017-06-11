@@ -6,9 +6,13 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "isomorphic-fetch": "latest"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-tcd": "0.0.13",
+    "eslint-plugin-react": "^7.0.1",
     "react-scripts": "1.0.7",
     "redux-devtools": "^3.4.0"
   },
