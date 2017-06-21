@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import IsItFriday from './IsItFriday';
+import Gif from './Gif';
 import moment from 'moment';
 
 class App extends React.Component {
@@ -22,6 +23,7 @@ class App extends React.Component {
                     <h1>{'Is it friday?'}</h1>
                 </div>
                 <IsItFriday friday={this.isItFriday} weekday={this.dayOfWeek}/>
+                <Gif weekday={this.dayOfWeek}/>
             </div>
         );
     }
