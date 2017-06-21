@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from '../logo.svg';
 import './App.css';
+import IsItFriday from './IsItFriday';
 
 const App = () => (
     <div className="App">
         <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo"/>
-            <h2>{'Welcome to React'}</h2>
+            <h1>{'Is it friday?'}</h1>
         </div>
+        <IsItFriday/>
     </div>
 );
 
