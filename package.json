@@ -10,8 +10,7 @@
     "eslint": "^3.19.0",
     "eslint-config-tcd": "0.0.13",
     "eslint-plugin-react": "^7.0.1",
-    "react-scripts": "1.0.7",
-    "redux-devtools": "^3.4.0"
+    "react-scripts": "1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
