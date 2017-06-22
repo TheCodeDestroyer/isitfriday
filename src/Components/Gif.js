@@ -26,8 +26,9 @@ class Gif extends React.Component {
     render() {
         return (
             <div className="iff-gif">
-                <img src={this.gifUrl} alt="Gif" title="Gif" />
+                <img src={this.gifUrl} alt="Gif" title="Gif"/>
                 <br/>
+                <img className="iff-attribution" src="/Poweredby_100px-Black_VertLogo.png" alt="Powered by GIPHY" title="Powered by GIPHY"/>
             </div>
         );
     }
