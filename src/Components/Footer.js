@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import './Footer.css';
-
 const Footer = (props) => (
     <div className="iif-footer">
         <p>{`Copyrights © ${props.year}  `}

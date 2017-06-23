@@ -1,12 +1,11 @@
 .App {
-  text-align: center;
+    text-align: center;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .App-header {
-  height: 85px;
-  padding: 20px;
-}
-
-.iff-attribution {
-
+    height: 85px;
+    padding: 20px;
 }
