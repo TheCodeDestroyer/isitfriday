@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
+import './Gif.css';
+
 class Gif extends React.Component {
     constructor(props) {
         super(props);
@@ -25,8 +27,8 @@ class Gif extends React.Component {
 
     render() {
         return (
-            <div className="iff-gif">
-                <img src={this.gifUrl} alt="Gif" title="Gif"/>
+            <div className="iff-gif-container">
+                <img className="iff-gif" src={this.gifUrl} alt="Gif" title="Gif"/>
                 <br/>
                 <img className="iff-attribution" src="/Poweredby_100px-Black_VertLogo.png" alt="Powered by GIPHY" title="Powered by GIPHY"/>
             </div>
