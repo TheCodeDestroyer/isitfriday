@@ -10,6 +10,7 @@
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "@3fs/eslint-config": "0.0.10",
     "eslint": "^3.19.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.0.1",
