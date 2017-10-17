@@ -8,10 +8,13 @@ import moment from 'moment';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.currentDate = moment();
-    this.isItFriday = this.currentDate.isoWeekday() === 5;
-    this.dayOfWeek = this.currentDate.format('dddd');
-    this.year = this.currentDate.format('YYYY');
+    const currentDate = moment();
+    this.state = {
+      currentDate: moment(),
+      isItFriday: currentDate.isoWeekday() === 5,
+      dayOfWeek: currentDate.format('dddd'),
+      year: currentDate.format('YYYY'),
+    };
   }
 
   shouldComponentUpdate() {
@@ -24,9 +27,9 @@ class App extends React.Component {
         <div className="App-header">
           <h1>{'Is it friday?'}</h1>
         </div>
-        <IsItFriday friday={this.isItFriday} weekday={this.dayOfWeek}/>
-        <Gif weekday={this.dayOfWeek}/>
-        <Footer year={this.year}/>
+        <IsItFriday friday={this.state.isItFriday} weekday={this.state.dayOfWeek}/>
+        <Gif weekday={this.state.dayOfWeek}/>
+        <Footer year={this.state.year}/>
       </div>
     );
   }
