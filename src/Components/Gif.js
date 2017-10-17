@@ -9,7 +9,7 @@ class Gif extends React.Component {
     super(props);
     this.state = {
       dayOfWeek: props.weekday,
-      gifUrl: 'http://media4.giphy.com/media/N256GFy1u6M6Y/giphy.gif',
+      gifUrl: 'https://media4.giphy.com/media/N256GFy1u6M6Y/giphy.gif',
       giphyUrl: '#'
     };
   }
@@ -18,14 +18,15 @@ class Gif extends React.Component {
     axios.get(`https://api.thecodedestroyer.com/api/giphy/isitfriday?dayOfWeek=${this.state.dayOfWeek}`)
       .then((response) => {
         this.setState({
-          gifUrl: response.data.data.image_url,
-          giphyUrl: response.data.data.url
+          gifUrl: response.data.data.image_url.replace(/^http:\/\//i, 'https://'),
+          giphyUrl: response.data.data.url.replace(/^http:\/\//i, 'https://')
         });
       });
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return this.state.gifUrl !== nextState.gifUrl;
+    return this.state.gifUrl !== nextState.gifUrl ||
+      this.state.giphyUrl !== nextState.giphyUrl;
   }
 
   render() {
