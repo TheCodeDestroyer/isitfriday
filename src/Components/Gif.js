@@ -32,7 +32,7 @@ class Gif extends React.Component {
   render() {
     return (
       <div className="iff-gif-container">
-        <a href={this.state.giphyUrl} target="_blank">
+        <a href={this.state.giphyUrl} target="_blank" rel="noopener noreferrer">
           <img className="iff-gif" src={this.state.gifUrl} alt="Gif" title="Gif"/>
         </a>
         <br/>
