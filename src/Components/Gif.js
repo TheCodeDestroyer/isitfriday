@@ -8,34 +8,43 @@ class Gif extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dayOfWeek: props.weekday,
       gifUrl: 'https://media4.giphy.com/media/N256GFy1u6M6Y/giphy.gif',
       giphyUrl: '#'
     };
   }
 
   componentDidMount() {
-    axios.get(`https://api.thecodedestroyer.com/api/giphy/isitfriday?dayOfWeek=${this.state.dayOfWeek}`)
+    const { weekday } = this.props;
+
+    axios
+      .get(
+        `https://api.thecodedestroyer.com/api/giphy/isitfriday?dayOfWeek=${weekday}`
+      )
       .then((response) => {
+        const image = response.data.data.images.original.url;
+
         this.setState({
-          gifUrl: response.data.data.image_url.replace(/^http:\/\//i, 'https://'),
-          giphyUrl: response.data.data.url.replace(/^http:\/\//i, 'https://')
+          gifUrl: image.replace(/^http:\/\//iu, 'https://'),
+          giphyUrl: response.data.data.url.replace(/^http:\/\//iu, 'https://')
         });
       });
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return this.state.gifUrl !== nextState.gifUrl ||
-      this.state.giphyUrl !== nextState.giphyUrl;
+    const { gifUrl, giphyUrl } = this.state;
+
+    return gifUrl !== nextState.gifUrl || giphyUrl !== nextState.giphyUrl;
   }
 
   render() {
+    const { gifUrl, giphyUrl } = this.state;
+
     return (
       <div className="iff-gif-container">
-        <a href={this.state.giphyUrl} target="_blank" rel="noopener noreferrer">
-          <img className="iff-gif" src={this.state.gifUrl} alt="Gif" title="Gif"/>
+        <a href={giphyUrl} target="_blank" rel="noopener noreferrer">
+          <img className="iff-gif" src={gifUrl} alt="Gif" title="Gif" />
         </a>
-        <br/>
+        <br />
         <img
           className="iff-attribution"
           src="/Poweredby_100px-Black_VertLogo.png"

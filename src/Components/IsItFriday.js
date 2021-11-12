@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const IsItFriday = (props) => (
+const IsItFriday = ({ friday, weekday }) => (
   <div className="iif-answer">
-    <h1>{props.friday ? 'Yes!' : 'No'}</h1>
-    {!props.friday &&
-    <h2>{`It's ${props.weekday}...`}</h2>
-    }
+    <h1>{friday ? 'Yes!' : 'No'}</h1>
+    {!friday && <h2>{`It's ${weekday}...`}</h2>}
   </div>
 );
 

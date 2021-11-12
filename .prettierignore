@@ -1,0 +1,7 @@
+node_modules
+build
+src/index.js
+src/utils/testing/windowMocks.js
+src/utils/fullCalendarConfig.js
+src/setupTests.js
+.drone.yml

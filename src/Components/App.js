@@ -9,11 +9,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     const currentDate = moment();
+
     this.state = {
-      currentDate: moment(),
       isItFriday: currentDate.isoWeekday() === 5,
       dayOfWeek: currentDate.format('dddd'),
-      year: currentDate.format('YYYY'),
+      year: currentDate.format('YYYY')
     };
   }
 
@@ -22,14 +22,16 @@ class App extends React.Component {
   }
 
   render() {
+    const { isItFriday, dayOfWeek, year } = this.state;
+
     return (
       <div className="App">
         <div className="App-header">
           <h1>{'Is it friday?'}</h1>
         </div>
-        <IsItFriday friday={this.state.isItFriday} weekday={this.state.dayOfWeek}/>
-        <Gif weekday={this.state.dayOfWeek}/>
-        <Footer year={this.state.year}/>
+        <IsItFriday friday={isItFriday} weekday={dayOfWeek} />
+        <Gif weekday={dayOfWeek} />
+        <Footer year={year} />
       </div>
     );
   }
