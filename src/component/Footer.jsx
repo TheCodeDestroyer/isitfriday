@@ -14,7 +14,7 @@ const Footer = ({ year }) => (
         rel="noreferrer noopener"
         href="https://thecodedestroyer.com"
       >
-        {'TheCodeDestroyer'}
+        TheCodeDestroyer
       </a>
     </p>
   </div>

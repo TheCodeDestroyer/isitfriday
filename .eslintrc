@@ -4,15 +4,13 @@
     "browser": true,
     "node": true
   },
+  "globals": {
+    "import": "readonly"
+  },
   "rules": {
-    // ADD RULES TO CORE CONFIG
-    "react/jsx-curly-brace-presence": "off",
-    "react/function-component-definition": [
+    "react/jsx-curly-brace-presence": [
       "error",
-      {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-      }
+      { "props": "never", "children": "never" }
     ],
     // Prettier conflicts
     "indent": "off",
