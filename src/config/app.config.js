@@ -1,15 +1,15 @@
-import _ from 'lodash';
+import { get, isEmpty, isUndefined } from 'lodash';
 import { envObj } from '../constant/app.constant';
 
 export const getEnvValue = (env, fallbackValue, skipError = false) => {
-  let envValue = _.get(envObj, env);
+  let envValue = get(envObj, env);
 
-  if (_.isEmpty(envValue) && !skipError) {
+  if (isEmpty(envValue) && !skipError) {
     // eslint-disable-next-line no-console
     console.error(`Missing value for ${env}`);
   }
 
-  if (_.isEmpty(envValue) && !_.isUndefined(fallbackValue)) {
+  if (isEmpty(envValue) && !isUndefined(fallbackValue)) {
     envValue = fallbackValue;
   }
 
