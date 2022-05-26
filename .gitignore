@@ -27,7 +27,7 @@ crashlytics-build.properties
 fabric.properties
 
 # production
-/dist
+#/dist
 
 # misc
 .DS_Store
