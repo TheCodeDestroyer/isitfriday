@@ -12,6 +12,10 @@
       "error",
       { "props": "never", "children": "never" }
     ],
+    "react/function-component-definition": [
+      "error",
+      { "namedComponents": "arrow-function" }
+    ],
     // Prettier conflicts
     "indent": "off",
     "implicit-arrow-linebreak": "off",

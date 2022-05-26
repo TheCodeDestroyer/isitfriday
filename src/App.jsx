@@ -7,8 +7,8 @@ import Footer from './component/Footer';
 
 const usePrepareData = () => {
   const currentDate = useMemo(() => moment(), []);
-  const dayOfWeek = useMemo(() => currentDate.format('dddd'), []);
-  const year = useMemo(() => currentDate.format('YYYY'), []);
+  const dayOfWeek = useMemo(() => currentDate.format('dddd'), [currentDate]);
+  const year = useMemo(() => currentDate.format('YYYY'), [currentDate]);
   const isItFriday = useMemo(
     () => currentDate.isoWeekday() === 5,
     [currentDate]
@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="app-header">
-        <h1>{'Is it friday?'}</h1>
+        <h1>Is it friday?</h1>
       </div>
       <IsItFriday friday={isItFriday} weekday={dayOfWeek} />
       <Gif weekday={dayOfWeek} />
