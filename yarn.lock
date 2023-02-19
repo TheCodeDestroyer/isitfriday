@@ -858,10 +858,10 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-tcd@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-tcd/-/eslint-config-tcd-1.2.0.tgz#4e59af94f0f9007284765368053502b5ed1ede9d"
-  integrity sha512-x0auyDayqBRpP41Ea6/wXfN8VXZztQbw3K3/B20947PsFd2bgzeAjnCAuwBX9uMlQbwAQMlqun6J/aCD0lakeA==
+eslint-config-tcd@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-tcd/-/eslint-config-tcd-1.3.0.tgz#3fdf27abc12602260a87fba00d187db4258522ac"
+  integrity sha512-7U5bE2oblwfb5REs/ZpaAxjdQoUmP5tQfO8SNXhKgeOLpofR+NP7VZsjSCOGFy1nRCHqo8fyj03Cv0L5CCS7iA==
 
 eslint-plugin-jsx-a11y@6.7.1:
   version "6.7.1"
