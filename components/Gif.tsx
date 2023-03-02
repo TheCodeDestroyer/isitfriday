@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { has, isEmpty } from 'lodash';
+import { isEmpty } from 'lodash';
 import Image from 'next/image';
 import type { FC } from 'react';
 import { useEffect, useMemo, useState } from 'react';
@@ -35,13 +35,7 @@ export const Gif: FC<GifProps> = ({ weekday = 'Unknown day' }) => {
   useEffect(() => {
     axios.get('/api/gif', { params: { weekday } }).then((response) => {
       const { images, url } = response.data;
-      let image;
-
-      if (has(images, 'downsized_large')) {
-        image = images.downsized_large;
-      } else {
-        image = images.downsized;
-      }
+      const image = images.downsized;
 
       setGiphyImage(image);
       setGiphyUrl(url);
