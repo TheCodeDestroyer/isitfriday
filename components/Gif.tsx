@@ -52,14 +52,7 @@ export const Gif: FC<GifProps> = ({ weekday = 'Unknown day' }) => {
   return (
     <div className="iff-gif-container">
       <a href={giphyUrl} target="_blank" rel="noopener noreferrer">
-        <Image
-          width={currentImage.width}
-          height={currentImage.height}
-          className="iff-gif"
-          src={currentImage.url}
-          alt="Gif"
-          title="Gif"
-        />
+        <img className="iff-gif" src={currentImage.url} alt="Gif" title="Gif" />
       </a>
       <br />
       <Image
