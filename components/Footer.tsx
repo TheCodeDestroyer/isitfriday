@@ -1,10 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import moment from 'moment';
+import type { FC } from 'react';
 
 const style = { color: '#666' };
 
-const Footer = ({ year }) => (
+interface FooterProps {
+  year?: string;
+}
+
+export const Footer: FC<FooterProps> = ({ year = moment().format('YYYY') }) => (
   <div className="iif-footer">
     <p>
       {`Copyrights © 2017 - ${year}  `}
@@ -19,8 +22,3 @@ const Footer = ({ year }) => (
     </p>
   </div>
 );
-
-Footer.propTypes = { year: PropTypes.string };
-Footer.defaultProps = { year: moment().format('YYYY') };
-
-export default Footer;
