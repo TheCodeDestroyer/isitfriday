@@ -14,7 +14,6 @@ specifiers:
   prop-types: 15.8.1
   react: 18.2.0
   react-dom: 18.2.0
-  react-ga: 3.3.0
   vite: ^4.0.0
 
 dependencies:
@@ -24,7 +23,6 @@ dependencies:
   prop-types: 15.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-ga: 3.3.0_sh5qlbywuemxd2y3xkrw2y2kr4
 
 devDependencies:
   '@vitejs/plugin-react': 3.1.0_vite@4.1.4
@@ -1889,16 +1887,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
-
-  /react-ga/3.3.0_sh5qlbywuemxd2y3xkrw2y2kr4:
-    resolution: {integrity: sha512-o8RScHj6Lb8cwy3GMrVH6NJvL+y0zpJvKtc0+wmH7Bt23rszJmnqEQxRbyrqUzk9DTJIHoP42bfO5rswC9SWBQ==}
-    peerDependencies:
-      prop-types: ^15.6.0
-      react: ^15.6.2 || ^16.0 || ^17
-    dependencies:
-      prop-types: 15.8.1
-      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:
