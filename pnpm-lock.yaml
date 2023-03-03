@@ -4,7 +4,7 @@ specifiers:
   '@next/eslint-plugin-next': 13.2.3
   '@trivago/prettier-plugin-sort-imports': 4.1.1
   '@types/lodash': 4.14.191
-  '@types/node': 18.14.4
+  '@types/node': 18.14.5
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@typescript-eslint/eslint-plugin': 5.54.0
@@ -38,7 +38,7 @@ devDependencies:
   '@next/eslint-plugin-next': 13.2.3
   '@trivago/prettier-plugin-sort-imports': 4.1.1_prettier@2.8.4
   '@types/lodash': 4.14.191
-  '@types/node': 18.14.4
+  '@types/node': 18.14.5
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@typescript-eslint/eslint-plugin': 5.54.0_6mj2wypvdnknez7kws2nfdgupi
@@ -457,8 +457,8 @@ packages:
     resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
     dev: true
 
-  /@types/node/18.14.4:
-    resolution: {integrity: sha512-VhCw7I7qO2X49+jaKcAUwi3rR+hbxT5VcYF493+Z5kMLI0DL568b7JI4IDJaxWFH0D/xwmGJNoXisyX+w7GH/g==}
+  /@types/node/18.14.5:
+    resolution: {integrity: sha512-CRT4tMK/DHYhw1fcCEBwME9CSaZNclxfzVMe7GsO6ULSwsttbj70wSiX6rZdIjGblu93sTJxLdhNIT85KKI7Qw==}
     dev: true
 
   /@types/prop-types/15.7.5:
