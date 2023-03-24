@@ -11,7 +11,7 @@ const handler = async (
   res: NextApiResponse
 ): Promise<void> => {
   const { weekday } = req.query;
-  const apiUrl = `https://api.giphy.com/v1/gifs/random?api_key=${giphyApiKey}&rating=G&tag=${weekday}`;
+  const apiUrl = `https://api.giphy.com/v1/gifs/random?api_key=${giphyApiKey}&rating=G&tag=its-${weekday}`;
   const response = await asyncPromiseWrapper(axios.get(apiUrl));
 
   if (isEmpty(response)) {
