@@ -1,6 +1,4 @@
-import { filter, get, includes, isEmpty, keys, values } from 'lodash';
 import moment from 'moment/moment';
-import { useRouter } from 'next/router';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
@@ -14,23 +12,7 @@ interface HookReturn {
   year: string;
 }
 
-const usePrepareData = (): HookReturn => {
-  const router = useRouter();
-
-  const isForced = useMemo((): boolean => {
-    const queryKeys = keys(router.query);
-    const queryValues = values(router.query);
-    const slug = get(router.query, '.slug');
-
-    const allParams = [...queryKeys, ...queryValues, slug];
-
-    const isForced = filter(allParams, (param) =>
-      includes(['force', 'f'], param)
-    );
-
-    return !isEmpty(isForced);
-  }, [router.query]);
-
+const usePrepareData = (isForced: boolean): HookReturn => {
   const currentDate = useMemo(() => moment(), []);
   const dayOfWeek = useMemo(() => {
     if (isForced) {
@@ -49,8 +31,12 @@ const usePrepareData = (): HookReturn => {
   return { dayOfWeek, year, isItFriday };
 };
 
-const App: FC = () => {
-  const { dayOfWeek, year, isItFriday } = usePrepareData();
+interface AppProps {
+  isForced?: boolean;
+}
+
+const App: FC<AppProps> = ({ isForced = false }) => {
+  const { dayOfWeek, year, isItFriday } = usePrepareData(isForced);
 
   return (
     <main className="app">
