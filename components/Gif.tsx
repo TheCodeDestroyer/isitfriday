@@ -46,6 +46,7 @@ export const Gif: FC<GifProps> = ({ weekday = 'Unknown day' }) => {
   return (
     <div className="iff-gif-container">
       <a href={giphyUrl} target="_blank" rel="noopener noreferrer">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="iff-gif" src={currentImage.url} alt="Gif" title="Gif" />
       </a>
       <br />
