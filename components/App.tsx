@@ -1,4 +1,8 @@
+'use client';
+
+import { filter, flatten, includes, isEmpty } from 'lodash';
 import moment from 'moment/moment';
+import { useSearchParams } from 'next/navigation';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
@@ -12,7 +16,20 @@ interface HookReturn {
   year: string;
 }
 
-const usePrepareData = (isForced: boolean): HookReturn => {
+const usePrepareData = (slug: string[] = []): HookReturn => {
+  const searchParams = useSearchParams();
+
+  const queryTuples: [string, string][] = Array.from(searchParams.entries());
+  const queryKeysAndValues = flatten(queryTuples);
+
+  const allParams = [...queryKeysAndValues, ...slug];
+
+  const filteredParams = filter(allParams, (param) =>
+    includes(['force', 'f'], param)
+  );
+
+  const isForced = !isEmpty(filteredParams);
+
   const currentDate = useMemo(() => moment(), []);
   const dayOfWeek = useMemo(() => {
     if (isForced) {
@@ -32,16 +49,16 @@ const usePrepareData = (isForced: boolean): HookReturn => {
 };
 
 interface AppProps {
-  isForced?: boolean;
+  slugs?: string[];
 }
 
-const App: FC<AppProps> = ({ isForced = false }) => {
-  const { dayOfWeek, year, isItFriday } = usePrepareData(isForced);
+const App: FC<AppProps> = ({ slugs }) => {
+  const { dayOfWeek, year, isItFriday } = usePrepareData(slugs);
 
   return (
-    <main className="app">
-      <div className="app-header">
-        <h1>Is it Friday?</h1>
+    <main className="text-center text-xl justify-center items-center flex h-screen flex-col">
+      <div className="h-[85px] p-5">
+        <h1 className="text-4xl my-6">Is it Friday?</h1>
       </div>
       <IsItFriday friday={isItFriday} weekday={dayOfWeek} />
       <Gif weekday={dayOfWeek} />

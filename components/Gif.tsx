@@ -1,8 +1,8 @@
-import axios from 'axios';
+'use client';
+
 import { isEmpty } from 'lodash';
 import Image from 'next/image';
-import type { FC } from 'react';
-import { useEffect, useMemo, useState } from 'react';
+import { type FC, useEffect, useMemo, useState } from 'react';
 
 interface GifProps {
   weekday?: string;
@@ -33,8 +33,10 @@ export const Gif: FC<GifProps> = ({ weekday = 'Unknown day' }) => {
   }, [giphyImage]);
 
   useEffect(() => {
-    axios.get('/api/gif', { params: { weekday } }).then((response) => {
-      const { images, url } = response.data;
+    const searchParams = new URLSearchParams({ weekday });
+
+    fetch(`/api/gif?${searchParams}`).then(async (response) => {
+      const { images, url } = await response.json();
       const image = images.downsized;
 
       setGiphyImage(image);
@@ -44,14 +46,13 @@ export const Gif: FC<GifProps> = ({ weekday = 'Unknown day' }) => {
   }, []);
 
   return (
-    <div className="iff-gif-container">
+    <div className="flex flex-col items-center">
       <a href={giphyUrl} target="_blank" rel="noopener noreferrer">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="iff-gif" src={currentImage.url} alt="Gif" title="Gif" />
       </a>
-      <br />
       <Image
-        className="iff-attribution"
+        className="mt-1"
         src="/powered-by.png"
         alt="Powered by GIPHY"
         title="Powered by GIPHY"
