@@ -10,7 +10,6 @@
   "tabWidth": 2,
   "useTabs": false,
   "trailingComma": "none",
-  "pluginSearchDirs": false,
   "plugins": [
     "@trivago/prettier-plugin-sort-imports"
   ],
