@@ -9,8 +9,8 @@ export const IsItFriday: FC<IsItFridayProps> = ({
   friday = false,
   weekday
 }) => (
-  <div className="iif-answer">
-    <h1>{friday ? 'Yes!' : 'No'}</h1>
-    {!friday && <h2>{`It's ${weekday}...`}</h2>}
+  <div>
+    <h1 className="text-4xl my-6">{friday ? 'Yes!' : 'No'}</h1>
+    {!friday && <h2 className="text-3xl my-5">{`It's ${weekday}...`}</h2>}
   </div>
 );
