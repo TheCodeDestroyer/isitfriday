@@ -16,7 +16,7 @@
     "format": "pnpm format:prettier && pnpm format:eslint"
   },
   "engines": {
-    "node": "18.x.x",
+    "node": "20.x.x",
     "pnpm": "8.x.x"
   },
   "dependencies": {
