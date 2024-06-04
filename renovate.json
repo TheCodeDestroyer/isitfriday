@@ -4,10 +4,12 @@
     "config:recommended",
     ":automergeLinters",
     ":automergeBranch",
-    ":automergeMinor"
+    ":automergeMinor",
+    ":prHourlyLimit1"
   ],
   "lockFileMaintenance": {
     "enabled": true
   },
-  "configMigration": true
+  "configMigration": true,
+  "branchConcurrentLimit": 3,
 }
