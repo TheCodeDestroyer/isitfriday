@@ -11,5 +11,5 @@
     "enabled": true
   },
   "configMigration": true,
-  "branchConcurrentLimit": 3,
+  "branchConcurrentLimit": 3
 }
