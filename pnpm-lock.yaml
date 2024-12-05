@@ -58,8 +58,8 @@ importers:
         specifier: 9.1.0
         version: 9.1.0(eslint@8.57.1)
       eslint-config-tcd:
-        specifier: 1.3.0
-        version: 1.3.0(eslint@8.57.1)
+        specifier: 2.0.2
+        version: 2.0.2(eslint@8.57.1)
       eslint-import-resolver-typescript:
         specifier: 3.7.0
         version: 3.7.0(eslint-plugin-import@2.31.0)(eslint@8.57.1)
@@ -781,11 +781,10 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-config-tcd@1.3.0:
-    resolution: {integrity: sha512-7U5bE2oblwfb5REs/ZpaAxjdQoUmP5tQfO8SNXhKgeOLpofR+NP7VZsjSCOGFy1nRCHqo8fyj03Cv0L5CCS7iA==}
-    engines: {node: ^10.12.0 || >=12.0.0}
+  eslint-config-tcd@2.0.2:
+    resolution: {integrity: sha512-IvpTZO+Gj5XRAVER99lcFylJ13VzffSqTnWAcBDNj9cgn8ePZUGA+ptvKwg05vkYZnCkIoiOdUPJ4VE584jo6A==}
     peerDependencies:
-      eslint: '>= 8'
+      eslint: '>= 9'
 
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
@@ -2561,7 +2560,7 @@ snapshots:
     dependencies:
       eslint: 8.57.1
 
-  eslint-config-tcd@1.3.0(eslint@8.57.1):
+  eslint-config-tcd@2.0.2(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
 
