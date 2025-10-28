@@ -17,7 +17,7 @@
     "type:check": "tsc --noEmit"
   },
   "engines": {
-    "node": "20.x.x",
+    "node": "22.x",
     "pnpm": "9.x"
   },
   "dependencies": {
