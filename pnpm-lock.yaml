@@ -58,8 +58,8 @@ importers:
         specifier: 9.1.2
         version: 9.1.2(eslint@8.57.1)
       eslint-config-tcd:
-        specifier: 2.0.2
-        version: 2.0.2(eslint@8.57.1)
+        specifier: 2.0.4
+        version: 2.0.4(eslint@8.57.1)
       eslint-import-resolver-typescript:
         specifier: 3.7.0
         version: 3.7.0(eslint-plugin-import@2.31.0)(eslint@8.57.1)
@@ -781,9 +781,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-config-tcd@2.0.2:
-    resolution: {integrity: sha512-IvpTZO+Gj5XRAVER99lcFylJ13VzffSqTnWAcBDNj9cgn8ePZUGA+ptvKwg05vkYZnCkIoiOdUPJ4VE584jo6A==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+  eslint-config-tcd@2.0.4:
+    resolution: {integrity: sha512-fPRZdtkWKpmgfBdTHJXDrWXyejv17V7BL8HV4eWwXo9fnDaCqC088210wXZcV5GZQi0ic1QG0H7VnBQxiwpRYg==}
     peerDependencies:
       eslint: '>= 9'
 
@@ -2561,7 +2560,7 @@ snapshots:
     dependencies:
       eslint: 8.57.1
 
-  eslint-config-tcd@2.0.2(eslint@8.57.1):
+  eslint-config-tcd@2.0.4(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
 
