@@ -1,6 +1,8 @@
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
+import type { GiphyResponse } from '@shared/types/api.types';
+
 const giphyApiKey = process.env.GIPHY_API_KEY;
 
 export const runtime = 'edge';
@@ -15,19 +17,19 @@ export const GET = async (req: NextRequest) => {
     if (!response.ok) {
       return NextResponse.json(
         { error: 'Could not find GIF' },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
-    const data = await response.json();
+    const data = (await response.json()) as GiphyResponse;
 
     const { images, url } = data.data;
 
     return NextResponse.json({ images, url }, { status: 200 });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Something went wrong' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 };

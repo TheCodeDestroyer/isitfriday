@@ -1,23 +1,21 @@
 'use client';
 
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import type { FC } from 'react';
+
 import { isEmpty } from 'lodash';
 import Image from 'next/image';
-import { type FC, useEffect, useMemo, useState } from 'react';
+
+import type { GiphyImage, GiphyResponse } from '@shared/types/api.types';
 
 interface GifProps {
   weekday?: string;
 }
 
-interface GiphyImage {
-  url: string;
-  width: number;
-  height: number;
-}
-
 const fallbackImage: GiphyImage = {
   url: 'https://media4.giphy.com/media/N256GFy1u6M6Y/giphy.gif',
   width: 351,
-  height: 233
+  height: 233,
 };
 
 export const Gif: FC<GifProps> = ({ weekday = 'Unknown day' }) => {
@@ -32,16 +30,25 @@ export const Gif: FC<GifProps> = ({ weekday = 'Unknown day' }) => {
     return giphyImage;
   }, [giphyImage]);
 
-  useEffect(() => {
+  const fetchGif = useCallback(async () => {
     const searchParams = new URLSearchParams({ weekday });
+    try {
+      const response = await fetch(`/api/gif?${searchParams}`);
+      const { images, url } = (await response.json()) as GiphyResponse['data'];
 
-    fetch(`/api/gif?${searchParams}`).then(async (response) => {
-      const { images, url } = await response.json();
-      const image = images.downsized;
-
-      setGiphyImage(image);
+      setGiphyImage(images.downsized);
       setGiphyUrl(url);
-    });
+    } catch {
+      setGiphyImage(fallbackImage);
+      setGiphyUrl('#');
+    }
+  }, [weekday]);
+
+  useEffect(() => {
+    if (isEmpty(giphyImage) || giphyUrl === '#') {
+      void fetchGif();
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
