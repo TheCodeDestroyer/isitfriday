@@ -1,10 +1,11 @@
 'use client';
 
+import type { FC } from 'react';
+import { useMemo } from 'react';
+
 import { filter, flatten, includes, isEmpty } from 'lodash';
 import moment from 'moment/moment';
 import { useSearchParams } from 'next/navigation';
-import type { FC } from 'react';
-import { useMemo } from 'react';
 
 import { Footer } from '@components/Footer';
 import { Gif } from '@components/Gif';
@@ -25,7 +26,7 @@ const usePrepareData = (slug: string[] = []): HookReturn => {
   const allParams = [...queryKeysAndValues, ...slug];
 
   const filteredParams = filter(allParams, (param) =>
-    includes(['force', 'f'], param)
+    includes(['force', 'f'], param),
   );
 
   const isForced = !isEmpty(filteredParams);
@@ -56,9 +57,9 @@ const App: FC<AppProps> = ({ slugs }) => {
   const { dayOfWeek, year, isItFriday } = usePrepareData(slugs);
 
   return (
-    <main className="text-center text-xl justify-center items-center flex h-screen flex-col">
+    <main className="flex h-screen flex-col items-center justify-center text-center text-xl">
       <div className="h-[85px] p-5">
-        <h1 className="text-4xl my-6">Is it Friday?</h1>
+        <h1 className="my-6 text-4xl">Is it Friday?</h1>
       </div>
       <IsItFriday friday={isItFriday} weekday={dayOfWeek} />
       <Gif weekday={dayOfWeek} />

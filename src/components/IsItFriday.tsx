@@ -7,10 +7,10 @@ interface IsItFridayProps {
 
 export const IsItFriday: FC<IsItFridayProps> = ({
   friday = false,
-  weekday
+  weekday,
 }) => (
   <div>
-    <h1 className="text-4xl my-6">{friday ? 'Yes!' : 'No'}</h1>
-    {!friday && <h2 className="text-3xl my-5">{`It's ${weekday}...`}</h2>}
+    <h1 className="my-6 text-4xl">{friday ? 'Yes!' : 'No'}</h1>
+    {!friday && <h2 className="my-5 text-3xl">{`It's ${weekday}...`}</h2>}
   </div>
 );

@@ -11,13 +11,13 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install PNPM
         id: pnpm-install
         uses: pnpm/action-setup@v2
         with:
-          version: 9
+          version: 10
           run_install: false
 
       - name: Get PNPM store
@@ -38,7 +38,10 @@ jobs:
         run: pnpm install
 
       - name: Run ESLint
-        run: pnpm lint:eslint
+        run: pnpm tcd-scripts lint --only=eslint
 
       - name: Run Prettier
-        run: pnpm lint:prettier
+        run: pnpm tcd-scripts lint --only=prettier
+
+      - name: Run TypeScript
+        run: pnpm tcd-scripts lint --only=tsc

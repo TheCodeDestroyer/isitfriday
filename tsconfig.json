@@ -1,31 +1,21 @@
 {
+  "extends": ["@tcd-devkit/tsconfig/next"],
   "compilerOptions": {
     "baseUrl": ".",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "paths": {
-      "@components/*": ["components/*"],
-      "@config/*": ["config/*"],
-      "@util/*": ["util/*"],
+      "@components/*": ["src/components/*"],
+      "@shared/*": ["src/lib/shared/*"],
+      "@server/*": ["src/lib/server/*"],
+      "@client/*": ["src/lib/client/*"],
       "@public/*": ["public/*"],
-      "@hook/*": ["hook/*"]
-    }
+      "@global-style": ["src/app/globals.css"],
+      "@server/convex/*": ["convex/*"]
+    },
+    "noEmit": true,
+    "incremental": true,
+    // Remove once TS fixes that this checks node_modules
+    "erasableSyntaxOnly": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "src"]
+  "include": ["**/*", "next-env.d.ts", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
