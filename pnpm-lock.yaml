@@ -39,10 +39,10 @@ importers:
         version: 0.1.13(@typescript-eslint/utils@8.48.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.46.3(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1)))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
       '@tcd-devkit/prettier-config-react':
         specifier: 0.1.7
-        version: 0.1.7(@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.7.4))(prettier@3.7.4)
+        version: 0.1.7(@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.8.4))(prettier@3.8.4)
       '@tcd-devkit/scripts':
         specifier: 0.2.2
-        version: 0.2.2(eslint@9.39.4(jiti@2.6.1))(prettier@3.7.4)(typescript@5.9.3)
+        version: 0.2.2(eslint@9.39.4(jiti@2.6.1))(prettier@3.8.4)(typescript@5.9.3)
       '@tcd-devkit/tsconfig':
         specifier: 0.1.3
         version: 0.1.3
@@ -65,8 +65,8 @@ importers:
         specifier: 8.5.15
         version: 8.5.15
       prettier:
-        specifier: 3.7.4
-        version: 3.7.4
+        specifier: 3.8.4
+        version: 3.8.4
       tailwindcss:
         specifier: 4.1.18
         version: 4.1.18
@@ -2034,8 +2034,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.3
 
-  prettier@3.7.4:
-    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
+  prettier@3.8.4:
+    resolution: {integrity: sha512-N2MylSdi48+5N/6S5j+maeHbUSIzzZ5uOcX5Hm4QpV8Dkb1HFjfAKTKX6yNPJQD9AhcT3ifHNB66tWTTJDi11Q==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2588,13 +2588,13 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.7.4)':
+  '@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.8.4)':
     dependencies:
       '@babel/generator': 7.28.5
       '@babel/parser': 7.28.5
       '@babel/traverse': 7.28.5
       '@babel/types': 7.28.5
-      prettier: 3.7.4
+      prettier: 3.8.4
       semver: 7.7.3
     transitivePeerDependencies:
       - supports-color
@@ -2946,11 +2946,11 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tcd-devkit/prettier-config-react@0.1.7(@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.7.4))(prettier@3.7.4)':
+  '@tcd-devkit/prettier-config-react@0.1.7(@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.8.4))(prettier@3.8.4)':
     dependencies:
-      '@tcd-devkit/prettier-config': 0.2.7(prettier@3.7.4)
-      prettier: 3.7.4
-      prettier-plugin-tailwindcss: 0.7.1(@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.7.4))(prettier@3.7.4)
+      '@tcd-devkit/prettier-config': 0.2.7(prettier@3.8.4)
+      prettier: 3.8.4
+      prettier-plugin-tailwindcss: 0.7.1(@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.8.4))(prettier@3.8.4)
     transitivePeerDependencies:
       - '@ianvs/prettier-plugin-sort-imports'
       - '@prettier/plugin-hermes'
@@ -2973,12 +2973,12 @@ snapshots:
       - prettier-plugin-svelte
       - supports-color
 
-  '@tcd-devkit/prettier-config@0.2.7(prettier@3.7.4)':
+  '@tcd-devkit/prettier-config@0.2.7(prettier@3.8.4)':
     dependencies:
-      '@ianvs/prettier-plugin-sort-imports': 4.6.2(prettier@3.7.4)
-      prettier: 3.7.4
-      prettier-plugin-packagejson: 2.5.19(prettier@3.7.4)
-      prettier-plugin-toml: 2.0.6(prettier@3.7.4)
+      '@ianvs/prettier-plugin-sort-imports': 4.6.2(prettier@3.8.4)
+      prettier: 3.8.4
+      prettier-plugin-packagejson: 2.5.19(prettier@3.8.4)
+      prettier-plugin-toml: 2.0.6(prettier@3.8.4)
     transitivePeerDependencies:
       - '@prettier/plugin-oxc'
       - '@vue/compiler-sfc'
@@ -2986,14 +2986,14 @@ snapshots:
       - prettier-plugin-ember-template-tag
       - supports-color
 
-  '@tcd-devkit/scripts@0.2.2(eslint@9.39.4(jiti@2.6.1))(prettier@3.7.4)(typescript@5.9.3)':
+  '@tcd-devkit/scripts@0.2.2(eslint@9.39.4(jiti@2.6.1))(prettier@3.8.4)(typescript@5.9.3)':
     dependencies:
       '@commander-js/extra-typings': 14.0.0(commander@14.0.2)
       chalk: 5.6.2
       commander: 14.0.2
       eslint: 9.39.4(jiti@2.6.1)
       execa: 9.6.0
-      prettier: 3.7.4
+      prettier: 3.8.4
       rimraf: 6.1.0
       typescript: 5.9.3
 
@@ -4440,25 +4440,25 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-packagejson@2.5.19(prettier@3.7.4):
+  prettier-plugin-packagejson@2.5.19(prettier@3.8.4):
     dependencies:
       sort-package-json: 3.4.0
       synckit: 0.11.11
     optionalDependencies:
-      prettier: 3.7.4
+      prettier: 3.8.4
 
-  prettier-plugin-tailwindcss@0.7.1(@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.7.4))(prettier@3.7.4):
+  prettier-plugin-tailwindcss@0.7.1(@ianvs/prettier-plugin-sort-imports@4.6.2(prettier@3.8.4))(prettier@3.8.4):
     dependencies:
-      prettier: 3.7.4
+      prettier: 3.8.4
     optionalDependencies:
-      '@ianvs/prettier-plugin-sort-imports': 4.6.2(prettier@3.7.4)
+      '@ianvs/prettier-plugin-sort-imports': 4.6.2(prettier@3.8.4)
 
-  prettier-plugin-toml@2.0.6(prettier@3.7.4):
+  prettier-plugin-toml@2.0.6(prettier@3.8.4):
     dependencies:
       '@taplo/lib': 0.5.0
-      prettier: 3.7.4
+      prettier: 3.8.4
 
-  prettier@3.7.4: {}
+  prettier@3.8.4: {}
 
   pretty-ms@9.3.0:
     dependencies:
