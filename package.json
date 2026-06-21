@@ -10,7 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "lodash": "4.17.21",
+    "lodash": "4.18.1",
     "moment": "2.30.1",
     "next": "16.0.7",
     "react": "19.2.7",
