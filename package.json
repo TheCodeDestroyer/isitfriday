@@ -18,7 +18,7 @@
     "sharp": "0.35.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "4.3.2",
+    "@tailwindcss/postcss": "4.3.3",
     "@tcd-devkit/eslint-preset-next": "0.1.13",
     "@tcd-devkit/prettier-config-react": "0.1.7",
     "@tcd-devkit/scripts": "0.2.2",
@@ -30,7 +30,7 @@
     "eslint": "9.39.5",
     "postcss": "8.5.19",
     "prettier": "3.8.4",
-    "tailwindcss": "4.3.2",
+    "tailwindcss": "4.3.3",
     "typescript": "5.9.3"
   },
   "packageManager": "pnpm@10.34.5",
