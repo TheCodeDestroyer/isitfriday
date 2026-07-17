@@ -29,7 +29,7 @@
     "@types/react-dom": "19.2.3",
     "eslint": "9.39.5",
     "postcss": "8.5.19",
-    "prettier": "3.8.4",
+    "prettier": "3.9.5",
     "tailwindcss": "4.3.3",
     "typescript": "5.9.3"
   },
